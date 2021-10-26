@@ -1,0 +1,16 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{title}} -First App</title>
+        {% else %}
+        <title>Home page</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>First App: <a href="/index">Home</a></div>
+        <h1>Hello, World!!</h1>
+
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
