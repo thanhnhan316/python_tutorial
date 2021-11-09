@@ -8,8 +8,18 @@
     </head>
     <body>
         <div>First App: <a href="/index">Home</a></div>
-        <h1>Hello, World!!</h1>
-
+        <div>First App: <a href="/login">login</a></div>
+        <div>First App: <a href="/register">register</a></div>
+        <h1>Hello, World!!</h1><br>
+        {% with messages = get_flashed_messages()%}
+            {% if messages %}
+        <ul>
+            {% for massage in messages %}
+            <li>{{messages }}</li>
+            {% endfor %}
+        </ul>
+            {% endif %}
+        {% endwith %}
         {% block content %}
         {% endblock %}
     </body>
